@@ -1,0 +1,9 @@
+# deployment-specific config (copy .env.example -> .env)
+.env
+
+# runtime data
+data/
+
+__pycache__/
+*.pyc
+.claude/
