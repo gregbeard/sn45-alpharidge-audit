@@ -1,4 +1,4 @@
-// sn45 audit sidecar — pm2 config
+// SN45 AlphaRidge Auditor — pm2 config
 //
 // All deployment-specific settings live in .env next to this file
 // (cp .env.example .env and edit). Both Python processes load .env themselves;

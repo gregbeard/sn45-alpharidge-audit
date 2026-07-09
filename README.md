@@ -1,9 +1,18 @@
-# sn45 audit sidecar
+# SN45 AlphaRidge Auditor
 
-Standalone audit for the sn45 (alpharidge-ai) validator, satisfying the
-gatekeeper requirement for a secondary process that verifies mining is fair and
-auditable. **Nothing here modifies the validator repo or process** — all inputs
-are read-only (pm2 logs, validator state JSON files, archive subtensor node).
+**An independent auditor for SN45 (AlphaRidge) validators.** It arithmetically
+replays the subnet's entire scoring pipeline — reputation gating, the
+alpha-economics weight formula, burn allocation, and the uint16 payload
+committed on chain — from archived per-epoch data, and verifies every step
+against what the validator claimed and what actually landed on chain. It
+satisfies the gatekeeper requirement for a secondary process proving mining is
+fair and auditable.
+
+The auditor is deliberately arms-length from the system it audits: the
+verification process is a single stdlib-only Python file (no bittensor, no LLM,
+no shared code with the validator), and **nothing here modifies the validator
+repo or process** — all inputs are read-only (pm2 logs, validator state JSON
+files, archive subtensor node).
 
 ## Components
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-sn45 standalone audit sidecar.
+SN45 AlphaRidge Auditor — standalone audit sidecar.
 
 A single-file, stdlib-only process (NO bittensor, NO LLM, NO third-party
 dependencies) that arithmetically verifies the sn45 validator's scoring and
@@ -501,7 +501,7 @@ STATE = AuditState()
 DASHBOARD_HTML = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>sn45 audit sidecar</title>
+<title>SN45 AlphaRidge Auditor</title>
 <style>
 :root { --bg:#f6f7f9; --card:#fff; --ink:#1a202c; --muted:#64748b; --line:#e2e8f0;
         --pass:#15803d; --pass-bg:#dcfce7; --fail:#b91c1c; --fail-bg:#fee2e2;
@@ -532,7 +532,8 @@ details { margin-top:4px; } summary { cursor:pointer; color:var(--muted); font-s
 #stale { display:none; background:var(--warn-bg); color:var(--warn); border:1px solid var(--warn);
          border-radius:10px; padding:10px 16px; margin-bottom:16px; font-weight:600; }
 </style></head><body>
-<h1>sn45 audit sidecar</h1>
+<h1>SN45 AlphaRidge Auditor</h1>
+<div class="sub">Independent auditor: replays the subnet's scoring &amp; weight arithmetic from archived epoch data and verifies emissions are fair — no bittensor or LLM dependencies.</div>
 <div class="sub" id="meta">loading…</div>
 <div id="stale"></div>
 <div class="tiles" id="tiles"></div>
